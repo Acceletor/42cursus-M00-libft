@@ -11,7 +11,7 @@ char *ft_strdup(const char *s1)
     if(des == 0)
         return (0);
     i = 0;
-    while(s[i])
+    while(s1[i])
     {
         des[i] = s1[i];
         i++;
