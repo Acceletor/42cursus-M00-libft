@@ -24,9 +24,9 @@ int ft_atoi(const char *str)
     return (res);
 }
 
-#include <stdlib.h>
-int main(){
-    char *str = "\t\n  42";
-    printf("%i\n", ft_atoi(str));
-    printf("%i\n", atoi(str));
-}
+//#include <stdlib.h>
+//int main(){
+//    char *str = "\t\n  42";
+//    printf("%i\n", ft_atoi(str));
+//    printf("%i\n", atoi(str));
+//}
