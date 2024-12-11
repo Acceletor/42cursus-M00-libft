@@ -6,7 +6,7 @@
 /*   By: ksuebtha <ksuebtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 15:40:09 by ksuebtha          #+#    #+#             */
-/*   Updated: 2024/12/11 15:41:04 by ksuebtha         ###   ########.fr       */
+/*   Updated: 2024/12/11 20:03:40 by ksuebtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,13 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	if (c == 0)
-		return ((char *)s + ft_strlen(s));
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == c)
-			return ((char *)s + i);
-		i++;
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
 	}
+	if (*s == (char)c)
+		return ((char *)s);
 	return (0);
 }
-
-
-
-//int main()
-//{
-//    const char str[] = "Hello, World!";
-//    char target = '\0';
-//
-//    char *result = ft_strchr(str, target);
-//    if (result)
-//        printf("Found '%c' at position: %ld\n", target, result - str);
-//    else
-//        printf("Character '%c' not found.\n", target);
-//
-//    return 0;
-//}

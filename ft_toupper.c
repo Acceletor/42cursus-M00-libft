@@ -6,7 +6,7 @@
 /*   By: ksuebtha <ksuebtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 16:16:44 by ksuebtha          #+#    #+#             */
-/*   Updated: 2024/12/11 16:17:06 by ksuebtha         ###   ########.fr       */
+/*   Updated: 2024/12/11 20:05:10 by ksuebtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,4 @@ int	ft_toupper(int c)
 	if ((char)c >= 'a' && (char)c <= 'z' )
 		return (c - 32);
 	return (c);
-
 }
-
-//int main() {
-//
-//    printf("%c\n", ft_toupper('9'));
-//    printf("%c\n", ft_toupper('e'));
-//
-//    return 0;
-//}

@@ -6,7 +6,7 @@
 /*   By: ksuebtha <ksuebtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 15:44:51 by ksuebtha          #+#    #+#             */
-/*   Updated: 2024/12/11 15:45:46 by ksuebtha         ###   ########.fr       */
+/*   Updated: 2024/12/11 20:03:20 by ksuebtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,36 +17,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	src_len;
 	size_t	dst_len;
-	size_t	res;
 
+	if (!dst || !src)
+		return (0);
 	src_len = ft_strlen(src);
 	dst_len = ft_strlen(dst);
+	if (dstsize == 0)
+		return (src_len);
+	if (dstsize <= dst_len)
+		return (dstsize + src_len);
 	i = 0;
-
-	if (dstsize > dst_len)
-		res = dst_len + src_len;
-	else
-		res = src_len + dstsize;
 	while (i < dstsize - dst_len - 1 && src[i] != 0)
 	{
 		dst[dst_len + i] = src[i];
 		i++;
 	}
 	dst[dst_len + i] = 0;
-
-	return (res);
+	return (dst_len + src_len);
 }
-//
-//int main()
-//{
-//    char dest[10] = "Hello";
-//    char src[] = " World!";
-//    size_t dest_size = sizeof(dest);
-//
-//    size_t result = ft_strlcat(dest, src, dest_size);
-//
-//    printf("Destination: %s\n", dest);
-//    printf("Total length: %zu\n", result);
-//
-//    return 0;
-//}

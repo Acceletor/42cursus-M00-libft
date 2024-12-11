@@ -6,7 +6,7 @@
 /*   By: ksuebtha <ksuebtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 15:00:05 by ksuebtha          #+#    #+#             */
-/*   Updated: 2024/12/11 15:02:00 by ksuebtha         ###   ########.fr       */
+/*   Updated: 2024/12/11 20:01:53 by ksuebtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	ft_atoi(const char *str)
 	int		res;
 
 	res = 0;
+	flag = '+';
 	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '-' || *str == '+')
@@ -28,18 +29,10 @@ int	ft_atoi(const char *str)
 	while (ft_isdigit(*str))
 	{
 		res *= 10;
-		res += *str - 48;
+		res += *str - '0';
 		str++;
 	}
 	if (flag == '-')
 		return (res * -1);
-
 	return (res);
 }
-
-//#include <stdlib.h>
-//int main(){
-//    char *str = "\t\n  42";
-//    printf("%i\n", ft_atoi(str));
-//    printf("%i\n", atoi(str));
-//}

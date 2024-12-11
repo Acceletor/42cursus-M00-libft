@@ -6,7 +6,7 @@
 /*   By: ksuebtha <ksuebtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 15:50:33 by ksuebtha          #+#    #+#             */
-/*   Updated: 2024/12/11 15:55:40 by ksuebtha         ###   ########.fr       */
+/*   Updated: 2024/12/11 20:06:57 by ksuebtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,33 +52,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[i] = 0;
 	return (trimmed);
 }
-
-//int main(void)
-//{
-//    char *result;
-//
-//    result = ft_strtrim("123secret124123", "123");
-//    printf("Test 1: %s\n", result);
-//    free(result);
-//
-//    result = ft_strtrim("abcHelloabc", "abc");
-//    printf("Test 2: %s\n", result); // Expected: "Hello"
-//    free(result);
-//
-//    result = ft_strtrim("Hello", "");
-//    printf("Test 3: %s\n", result); // Expected: "Hello"
-//    free(result);
-//
-//    result = ft_strtrim("     ", " ");
-//    printf("Test 4: %s\n", result); // Expected: ""
-//    free(result);
-//
-//    result = ft_strtrim(NULL, "abc");
-//    printf("Test 5: %s\n", result ? result : "NULL"); // Expected: "NULL"
-//
-//    result = ft_strtrim("Hello", NULL);
-//    printf("Test 6: %s\n", result); // Expected: "Hello"
-//    free(result);
-//
-//    return (0);
-//}
