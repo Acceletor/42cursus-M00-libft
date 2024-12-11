@@ -6,7 +6,7 @@
 /*   By: ksuebtha <ksuebtha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 14:46:09 by ksuebtha          #+#    #+#             */
-/*   Updated: 2024/12/03 15:26:23 by ksuebtha         ###   ########.fr       */
+/*   Updated: 2024/12/11 15:39:58 by ksuebtha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	*ft_memset(void *s, int c, size_t len)
 //     for (i = 0; i < sizeof(buffer); i++) {
 //         buffer[i] = '.';
 //     }
-//     buffer[sizeof(buffer) - 1] = '\0'; // Null-terminate the buffer for display purposes
+//     buffer[sizeof(buffer) - 1] = '\0';
 //
 //     printf("Before memset: %s\n", buffer);
 //
